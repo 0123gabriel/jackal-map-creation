@@ -144,7 +144,7 @@ class JackalMap:
   # returns the largest contiguous region with a tile in the leftmost column
   def biggest_left_region(self):
     max_size = 0
-    max_region = []
+    max_region = [[0 for i in range(self.cols)] for j in range(self.rows)]
     for row in range(self.rows):
       region, size = self._get_region(row, 0)
 
@@ -157,7 +157,7 @@ class JackalMap:
   # returns the largest contiguous region with a tile in the rightmost column
   def biggest_right_region(self):
     max_size = 0
-    max_region = []
+    max_region = [[0 for i in range(self.cols)] for j in range(self.rows)]
     for row in range(self.rows):
       region, size = self._get_region(row, self.cols-1)
 
@@ -692,4 +692,4 @@ def main(iteration=0, seed=0, smooth_iter=4, fill_pct=.27, rows=30, cols=30, sho
     
 
 if __name__ == "__main__":
-    main(iteration = -1, seed=0, fill_pct=0.2, smooth_iter=4)
+    main(iteration = -1, seed=0, fill_pct=0.35, smooth_iter=4)
