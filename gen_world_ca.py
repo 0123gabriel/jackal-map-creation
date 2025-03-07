@@ -692,4 +692,4 @@ def main(iteration=0, seed=0, smooth_iter=4, fill_pct=.27, rows=30, cols=30, sho
     
 
 if __name__ == "__main__":
-    main(iteration = -1, seed=0, fill_pct=0.35, smooth_iter=4)
+    main(iteration = -1, seed=0, fill_pct=0.30, smooth_iter=4)
